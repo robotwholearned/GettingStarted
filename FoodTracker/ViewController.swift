@@ -29,6 +29,8 @@ class ViewController: UIViewController {
     }
     @IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
 
+        //Hide the Keyboard
+        nameTextField.resignFirstResponder()
     }
 
 }
