@@ -64,7 +64,18 @@ extension ViewController: UITextFieldDelegate {
 }
 
 extension ViewController: UIImagePickerControllerDelegate {
-    
+    // MARK: UIImagePickerControllerDelegate
+
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        // Dismiss the picker if the user canceled.
+        dismissViewControllerAnimated(true, completion: nil)
+
+    }
+
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+
+    }
+
 }
 
 extension ViewController: UINavigationControllerDelegate {
