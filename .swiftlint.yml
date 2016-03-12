@@ -1,0 +1,6 @@
+line_length:
+  warning: 300
+  error:   1000
+excluded: # paths to ignore during linting.
+  - Pods
+  - R.generated.swift
