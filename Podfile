@@ -4,7 +4,7 @@
 # use_frameworks!
 
 target 'FoodTracker' do
-
+ pod 'R.swift'
 end
 
 target 'FoodTrackerTests' do
