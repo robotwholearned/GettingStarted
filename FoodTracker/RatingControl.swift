@@ -10,4 +10,10 @@ import UIKit
 
 class RatingControl: UIView {
 
+    // MARK: Initialization
+    //Every UIView subclass that implements an initializer must include an implementation of init?(coder:)
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
 }
