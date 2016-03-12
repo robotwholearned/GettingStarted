@@ -24,6 +24,10 @@ class RatingControl: UIView {
         }
     }
 
+    override func layoutSubviews() {
+        
+    }
+
     func addButton() {
 
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
