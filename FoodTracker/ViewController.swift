@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         mealNameLabel.text = "Default Text"
     }
     @IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
-        
+
     }
 
 }
@@ -45,5 +45,14 @@ extension ViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(textField: UITextField) {
         mealNameLabel.text = textField.text
     }
+}
+
+extension ViewController: UIImagePickerControllerDelegate {
+
+
+}
+
+extension ViewController: UINavigationControllerDelegate {
+
 }
 
