@@ -25,4 +25,9 @@ class RatingControl: UIView {
         return CGSize(width: 240, height: 44)
     }
 
+    // MARK: Button Action
+    func ratingButtonTapped(sender: UIButton) {
+        print("Button pressed 👍")
+    }
+
 }
