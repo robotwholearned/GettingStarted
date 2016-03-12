@@ -22,8 +22,8 @@ class RatingControl: UIView {
     //Every UIView subclass that implements an initializer must include an implementation of init?(coder:)
     required init?(coder aDecoder: NSCoder) {
 
-        filledStarImage = UIImage(named: "filledStar")!
-        emptyStarImage = UIImage(named: "emptyStar")!
+        filledStarImage = R.image.filledStar()!
+        emptyStarImage = R.image.emptyStar()!
 
         super.init(coder: aDecoder)
 
