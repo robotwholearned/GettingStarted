@@ -17,8 +17,10 @@ class RatingControl: UIView {
         }
     }
     var ratingButtons = [UIButton]()
+
     var stars = 5
     var spacing = 5
+
     var filledStarImage: UIImage
     var emptyStarImage: UIImage
 
@@ -31,7 +33,7 @@ class RatingControl: UIView {
 
         super.init(coder: aDecoder)
 
-        for _ in 0..<5 {
+        for _ in 0..<stars {
             addButton()
         }
     }
@@ -41,7 +43,7 @@ class RatingControl: UIView {
         var buttonFrame = CGRect(x: 0, y: 0, width: buttonSize, height: buttonSize)
 
         for (index, button) in ratingButtons.enumerate() {
-            buttonFrame.origin.x = CGFloat(index * (buttonSize + 5))
+            buttonFrame.origin.x = CGFloat(index * (buttonSize + spacing))
             button.frame = buttonFrame
         }
         updateButtonSelectionStates()
