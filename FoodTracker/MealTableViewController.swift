@@ -10,6 +10,9 @@ import UIKit
 
 class MealTableViewController: UITableViewController {
 
+    //MARK: Properties
+    var meals = [Meal]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
