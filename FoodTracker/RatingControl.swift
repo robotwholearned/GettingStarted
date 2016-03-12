@@ -13,6 +13,9 @@ class RatingControl: UIView {
     // MARK: Properties
     var rating = 0
     var ratingButtons = [UIButton]()
+    let buttonWidth = 44
+    let buttonPadding = 5
+    let startingButtonFrame = CGRect(x: 0, y: 0, width: 44, height: 44)
 
     // MARK: Initialization
     //Every UIView subclass that implements an initializer must include an implementation of init?(coder:)
@@ -25,12 +28,17 @@ class RatingControl: UIView {
     }
 
     override func layoutSubviews() {
-        
+        var buttonFrame = startingButtonFrame
+
+        for (index, button) in ratingButtons.enumerate() {
+            buttonFrame.origin.x = CGFloat(index * (buttonWidth + buttonPadding))
+            button.frame = buttonFrame
+        }
     }
 
     func addButton() {
 
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
+        let button = UIButton(frame: startingButtonFrame)
 
         button.backgroundColor = .redColor()
         button.addTarget(self, action: "ratingButtonTapped:", forControlEvents: .TouchDown)
