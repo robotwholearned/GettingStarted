@@ -28,7 +28,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J2g-NX-IRV">
-                                        <rect key="frame" x="0.0" y="32" width="129" height="30"/>
+                                        <rect key="frame" x="0.0" y="32.5" width="560" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
@@ -37,6 +37,10 @@
                                         <state key="normal" title="Set Default Label Text"/>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="J2g-NX-IRV" secondAttribute="trailing" id="ZLw-12-RpR"/>
+                                    <constraint firstItem="J2g-NX-IRV" firstAttribute="leading" secondItem="tqN-Ql-em6" secondAttribute="leading" id="oiv-aG-dEg"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
