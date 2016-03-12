@@ -10,6 +10,10 @@ import UIKit
 
 class RatingControl: UIView {
 
+    // MARK: Properties
+    var rating = 0
+    var ratingButtons = [UIButton]()
+
     // MARK: Initialization
     //Every UIView subclass that implements an initializer must include an implementation of init?(coder:)
     required init?(coder aDecoder: NSCoder) {
