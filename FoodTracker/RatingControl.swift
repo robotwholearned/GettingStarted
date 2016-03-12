@@ -50,7 +50,6 @@ class RatingControl: UIView {
         button.setImage(filledStarImage, forState: [.Highlighted, .Selected])
         button.setImage(emptyStarImage, forState: .Normal)
 
-        button.backgroundColor = .redColor()
         button.addTarget(self, action: "ratingButtonTapped:", forControlEvents: .TouchDown)
 
         ratingButtons += [button]
