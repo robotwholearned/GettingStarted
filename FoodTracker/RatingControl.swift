@@ -21,4 +21,8 @@ class RatingControl: UIView {
         addSubview(button)
     }
 
+    override func intrinsicContentSize() -> CGSize {
+        return CGSize(width: 240, height: 44)
+    }
+
 }
