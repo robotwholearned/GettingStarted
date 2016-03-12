@@ -70,6 +70,8 @@ class RatingControl: UIView {
     // MARK: Button Action
     func ratingButtonTapped(sender: UIButton) {
         print("Button pressed 👍")
+
+        rating = ratingButtons.indexOf(sender)! + 1
     }
 
 }
