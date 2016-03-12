@@ -77,6 +77,12 @@ extension ViewController: UIImagePickerControllerDelegate {
         // The info dictionary contains multiple representations of the image, and this uses the original.
         let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
 
+        // Set photoImageView to display the selected image.
+        photoImageView.image = selectedImage
+
+        // Dismiss the picker if the user canceled.
+        dismissViewControllerAnimated(true, completion: nil)
+
     }
 
 }
