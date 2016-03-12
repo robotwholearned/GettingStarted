@@ -24,7 +24,7 @@ public struct ReuseIdentifier<Reusable>: ReuseIdentifierType {
 
   /**
    Create a new ReuseIdentifier based on the string identifier
-   
+
    - parameter identifier: The string identifier for this reusable
 
    - returns: A new ReuseIdentifier

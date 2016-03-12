@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         imagePickerController.delegate = self
 
         presentViewController(imagePickerController, animated: true) { () -> Void in
-            
+
         }
 
     }
@@ -74,8 +74,12 @@ extension ViewController: UIImagePickerControllerDelegate {
 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
 
+        // swiftlint:disable force_cast
+
         // The info dictionary contains multiple representations of the image, and this uses the original.
         let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+
+        // swiftlint:enable force_cast
 
         // Set photoImageView to display the selected image.
         photoImageView.image = selectedImage
@@ -90,4 +94,3 @@ extension ViewController: UIImagePickerControllerDelegate {
 extension ViewController: UINavigationControllerDelegate {
 
 }
-

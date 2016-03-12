@@ -36,7 +36,7 @@ public struct StoryboardSegueIdentifier<Segue, Source, Destination>: StoryboardS
 
   /**
    Create a new identifier based on the identifier string
-   
+
    - returns: A new StoryboardSegueIdentifier
   */
   public init(identifier: String) {
@@ -45,8 +45,7 @@ public struct StoryboardSegueIdentifier<Segue, Source, Destination>: StoryboardS
 
   /// Create a new StoryboardSegue based on the identifier and source view controller
   public func storyboardSegueWithSource(sourceViewController: Source)
-    -> StoryboardSegue<Segue, Source, Destination>
-  {
+    -> StoryboardSegue<Segue, Source, Destination> {
     return StoryboardSegue(identifier: self, sourceViewController: sourceViewController)
   }
 }

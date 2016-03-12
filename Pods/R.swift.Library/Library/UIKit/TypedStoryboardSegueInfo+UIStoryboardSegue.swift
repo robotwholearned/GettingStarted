@@ -12,7 +12,7 @@ import UIKit
 extension TypedStoryboardSegueInfo {
   /**
    Returns typed information about the given segue, fails if the segue types don't exactly match types.
-   
+
    - returns: A newly initialized TypedStoryboardSegueInfo object or nil.
   */
   public init?<SegueIdentifier: StoryboardSegueIdentifierType where SegueIdentifier.SegueType == Segue, SegueIdentifier.SourceType == Source, SegueIdentifier.DestinationType == Destination>(segueIdentifier: SegueIdentifier, segue: UIStoryboardSegue) {

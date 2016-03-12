@@ -12,10 +12,10 @@ import UIKit
 public extension UICollectionView {
   /**
    Returns a typed reusable cell object located by its identifier
-   
+
    - parameter identifier: The R.reuseIdentifier.* value for the specified cell.
    - parameter indexPath: The index path specifying the location of the cell. The data source receives this information when it is asked for the cell and should just pass it along. This method uses the index path to perform additional configuration based on the cell’s position in the collection view.
-   
+
    - returns: A subclass of UICollectionReusableView or nil if the cast fails.
   */
   public func dequeueReusableCellWithReuseIdentifier<Identifier: ReuseIdentifierType where Identifier.ReusableType: UICollectionReusableView>(identifier: Identifier, forIndexPath indexPath: NSIndexPath) -> Identifier.ReusableType? {
@@ -24,11 +24,11 @@ public extension UICollectionView {
 
   /**
    Returns a typed reusable supplementary view located by its identifier and kind.
-   
+
    - parameter elementKind: The kind of supplementary view to retrieve. This value is defined by the layout object.
    - parameter identifier: The R.reuseIdentifier.* value for the specified view.
    - parameter indexPath: The index path specifying the location of the cell. The data source receives this information when it is asked for the cell and should just pass it along. This method uses the index path to perform additional configuration based on the cell’s position in the collection view.
-   
+
    - returns: A subclass of UICollectionReusableView or nil if the cast fails.
   */
   public func dequeueReusableSupplementaryViewOfKind<Identifier: ReuseIdentifierType where Identifier.ReusableType: UICollectionReusableView>(elementKind: String, withReuseIdentifier identifier: Identifier, forIndexPath indexPath: NSIndexPath) -> Identifier.ReusableType? {

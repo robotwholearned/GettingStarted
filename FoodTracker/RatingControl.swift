@@ -75,7 +75,7 @@ class RatingControl: UIView {
     }
 
     func updateButtonSelectionStates() {
-        
+
     }
 
 }
