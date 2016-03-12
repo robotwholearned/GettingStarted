@@ -40,6 +40,7 @@ class RatingControl: UIView {
             buttonFrame.origin.x = CGFloat(index * (buttonSize + 5))
             button.frame = buttonFrame
         }
+        updateButtonSelectionStates()
     }
 
     func addButton() {
@@ -72,9 +73,15 @@ class RatingControl: UIView {
         print("Button pressed 👍")
 
         rating = ratingButtons.indexOf(sender)! + 1
+
+        updateButtonSelectionStates()
     }
 
     func updateButtonSelectionStates() {
+
+        for (index, button) in ratingButtons.enumerate() {
+            button.selected = index < rating
+        }
 
     }
 
