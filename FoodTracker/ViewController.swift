@@ -27,10 +27,24 @@ class ViewController: UIViewController {
     @IBAction func setDefaultLabelText(sender: UIButton) {
         mealNameLabel.text = "Default Text"
     }
+
     @IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
 
         //Hide the Keyboard
         nameTextField.resignFirstResponder()
+
+        // UIImagePickerController is a view controller that lets a user pick media from their photo library.
+        let imagePickerController = UIImagePickerController()
+
+        // Only allow photos to be picked, not taken.
+        imagePickerController.sourceType = .PhotoLibrary
+
+        imagePickerController.delegate = self
+
+        presentViewController(imagePickerController, animated: true) { () -> Void in
+            
+        }
+
     }
 
 }
@@ -50,8 +64,7 @@ extension ViewController: UITextFieldDelegate {
 }
 
 extension ViewController: UIImagePickerControllerDelegate {
-
-
+    
 }
 
 extension ViewController: UINavigationControllerDelegate {
