@@ -31,6 +31,11 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITextFieldDelegate {
-
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        return true
+    }
+    func textFieldDidEndEditing(textField: UITextField) {
+        
+    }
 }
 
