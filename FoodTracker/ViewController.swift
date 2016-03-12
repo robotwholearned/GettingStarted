@@ -40,7 +40,7 @@ extension ViewController: UITextFieldDelegate {
         return true
     }
     func textFieldDidEndEditing(textField: UITextField) {
-
+        mealNameLabel.text = textField.text
     }
 }
 
