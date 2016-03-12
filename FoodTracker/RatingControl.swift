@@ -11,7 +11,11 @@ import UIKit
 class RatingControl: UIView {
 
     // MARK: Properties
-    var rating = 0
+    var rating = 0 {
+        didSet {
+            setNeedsLayout()
+        }
+    }
     var ratingButtons = [UIButton]()
     var stars = 5
     var spacing = 5
