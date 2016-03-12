@@ -13,6 +13,8 @@ class RatingControl: UIView {
     // MARK: Properties
     var rating = 0
     var ratingButtons = [UIButton]()
+    var stars = 5
+    var spacing = 5
 
     // MARK: Initialization
     //Every UIView subclass that implements an initializer must include an implementation of init?(coder:)
@@ -36,7 +38,7 @@ class RatingControl: UIView {
 
     func addButton() {
 
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
+        let button = UIButton()
 
         button.backgroundColor = .redColor()
         button.addTarget(self, action: "ratingButtonTapped:", forControlEvents: .TouchDown)
@@ -48,7 +50,10 @@ class RatingControl: UIView {
     }
 
     override func intrinsicContentSize() -> CGSize {
-        return CGSize(width: 240, height: 44)
+
+        let buttonSize = Int(frame.size.height)
+        let width = (buttonSize + spacing) * stars
+        return CGSize(width: width, height: buttonSize)
     }
 
     // MARK: Button Action
