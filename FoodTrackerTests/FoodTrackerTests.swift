@@ -14,7 +14,7 @@ class FoodTrackerTests: XCTestCase {
     // MARK: FoodTracker Tests
 
     // Tests to confirm that the Meal initializer returns when no name or a negative rating is provided.
-    func testMealInitializationFailsWithInvalidInput() {
+    func testMealInitializationFailsWithInvalidName() {
         let potentialItem = Meal(name: "", photo: nil, rating: 0)
         XCTAssertNil(potentialItem, "Empty name is invalid")
     }
@@ -24,8 +24,8 @@ class FoodTrackerTests: XCTestCase {
         XCTAssertNotNil(potentialItem)
     }
 
-    func testMealInitializationSuccedsWithInvalidInput() {
+    func testMealInitializationFailsWithInvalidRating() {
         let badRating = Meal(name: "Really bad rating", photo: nil, rating: -1)
-        XCTAssertNotNil(badRating)
+        XCTAssertNil(badRating)
     }
 }
