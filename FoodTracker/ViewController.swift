@@ -30,12 +30,17 @@ class ViewController: UIViewController {
 
 }
 
+// MARK: UITextFieldDelegate
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField) -> Bool {
+
+        //Hide the Keyboard
+        textField.resignFirstResponder()
+
         return true
     }
     func textFieldDidEndEditing(textField: UITextField) {
-        
+
     }
 }
 
