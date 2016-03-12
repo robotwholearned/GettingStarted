@@ -74,4 +74,8 @@ class RatingControl: UIView {
         rating = ratingButtons.indexOf(sender)! + 1
     }
 
+    func updateButtonSelectionStates() {
+        
+    }
+
 }
