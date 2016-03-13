@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MealViewController.swift
 //  FoodTracker
 //
 //  Created by Sandquist, Cassandra - Cassandra on 3/12/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MealViewController: UIViewController {
 
     // MARK: Properties
     @IBOutlet weak var nameTextField: UITextField!
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: UITextFieldDelegate
-extension ViewController: UITextFieldDelegate {
+extension MealViewController: UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField) -> Bool {
 
         //Hide the Keyboard
@@ -57,7 +57,7 @@ extension ViewController: UITextFieldDelegate {
     }
 }
 
-extension ViewController: UIImagePickerControllerDelegate {
+extension MealViewController: UIImagePickerControllerDelegate {
     // MARK: UIImagePickerControllerDelegate
 
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
@@ -85,6 +85,6 @@ extension ViewController: UIImagePickerControllerDelegate {
 
 }
 
-extension ViewController: UINavigationControllerDelegate {
+extension MealViewController: UINavigationControllerDelegate {
 
 }
