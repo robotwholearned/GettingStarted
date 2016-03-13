@@ -112,6 +112,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="bF9-4g-8Ew">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="R2k-Id-eOS"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="6Ny-cz-CHf"/>
                     </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="J2g-NX-IRV" id="d9g-aa-UMc"/>
