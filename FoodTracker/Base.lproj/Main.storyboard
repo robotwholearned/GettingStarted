@@ -53,7 +53,7 @@
                     <navigationItem key="navigationItem" title="Your Meals" id="0XZ-Cj-WQt">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pit-8x-yIT">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="b2d-HE-mnP"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="AddItem" id="b2d-HE-mnP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
