@@ -53,7 +53,7 @@
                     <navigationItem key="navigationItem" title="Your Meals" id="0XZ-Cj-WQt">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pit-8x-yIT">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="AddItem" id="b2d-HE-mnP"/>
+                                <segue destination="WmM-oy-Nc4" kind="presentation" identifier="AddItem" id="b2d-HE-mnP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -74,7 +74,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="tqN-Ql-em6">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="tqN-Ql-em6">
                                 <rect key="frame" x="20" y="80" width="560" height="418"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J2g-NX-IRV">
@@ -110,6 +110,7 @@
                             <constraint firstItem="tqN-Ql-em6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="Oty-jC-NaF"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="bF9-4g-8Ew"/>
                     <connections>
                         <outlet property="nameTextField" destination="J2g-NX-IRV" id="d9g-aa-UMc"/>
                         <outlet property="photoImageView" destination="e4L-Vr-kli" id="NTk-Yl-vlh"/>
@@ -123,7 +124,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1957" y="-354"/>
+            <point key="canvasLocation" x="2769" y="-354"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HLm-Ag-wCq">
@@ -142,6 +143,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q8z-bx-N1r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="435" y="-354"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4Xo-IH-qpV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WmM-oy-Nc4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Iaa-fD-iUn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="u35-ZX-jLl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q1d-sN-RUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957" y="-354"/>
         </scene>
     </scenes>
     <resources>
