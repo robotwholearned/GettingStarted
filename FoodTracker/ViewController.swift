@@ -12,7 +12,6 @@ class ViewController: UIViewController {
 
     // MARK: Properties
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var ratingControl: RatingControl!
 
@@ -55,7 +54,6 @@ extension ViewController: UITextFieldDelegate {
         return true
     }
     func textFieldDidEndEditing(textField: UITextField) {
-        mealNameLabel.text = textField.text
     }
 }
 
