@@ -16,7 +16,7 @@ class MealViewController: UIViewController {
     @IBOutlet weak var ratingControl: RatingControl!
 
     @IBOutlet weak var saveButton: UIBarButtonItem!
-    
+
     /*
     This value is either passed by `MealTableViewController` in `prepareForSegue(_:sender:)` or constructed as part of adding a new meal.
     */
@@ -28,6 +28,15 @@ class MealViewController: UIViewController {
         // Handle the text field’s user input through delegate callbacks.
         nameTextField.delegate = self
     }
+
+    // MARK: Navigation
+    // This method lets you configure a view controller before it's presented.
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if sender === saveButton {
+
+        }
+    }
+
 
     // MARK: Actions
     @IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
