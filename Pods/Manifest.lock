@@ -1,12 +1,15 @@
 PODS:
+  - Former (1.2.0)
   - R.swift (1.3.0):
     - R.swift.Library (~> 1.1.0)
   - R.swift.Library (1.1.0)
 
 DEPENDENCIES:
+  - Former
   - R.swift
 
 SPEC CHECKSUMS:
+  Former: 7c5f4451116e118cafdb1be029e4264f9cb75295
   R.swift: 43f8a833dd8cbb4a19908cbfd37fb982e9147899
   R.swift.Library: 775f3086e07313ed1a1dfddca8418317f5a87397
 
