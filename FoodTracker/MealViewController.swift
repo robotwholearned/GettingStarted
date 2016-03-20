@@ -27,6 +27,7 @@ class MealViewController: UIViewController {
 
         // Handle the text field’s user input through delegate callbacks.
         nameTextField.delegate = self
+        checkValidMealName()
     }
 
     // MARK: Navigation
@@ -75,6 +76,17 @@ extension MealViewController: UITextFieldDelegate {
         return true
     }
     func textFieldDidEndEditing(textField: UITextField) {
+        checkValidMealName()
+        navigationItem.title = textField.text
+    }
+
+    func textFieldDidBeginEditing(textField: UITextField) {
+        saveButton.enabled = false
+    }
+
+    func checkValidMealName() {
+        let text = nameTextField.text ?? ""
+        saveButton.enabled = !text.isEmpty
     }
 }
 
