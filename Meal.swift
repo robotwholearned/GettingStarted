@@ -15,6 +15,13 @@ class Meal {
     var photo: UIImage?
     var rating: Int
 
+    // MARK: Types
+    struct PropertyKey {
+        static let nameKey = "name"
+        static let photoKey = "photo"
+        static let ratingKey = "rating"
+    }
+
     // MARK: Initialization
     init?(name: String, photo: UIImage?, rating: Int) {
         // Initialize stored properties.
