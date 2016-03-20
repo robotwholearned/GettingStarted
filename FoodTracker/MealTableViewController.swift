@@ -60,9 +60,7 @@ class MealTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
-        // swiftlint:disable force_cast
         let cell = tableView.dequeueReusableCellWithIdentifier(R.reuseIdentifier.mealTableViewCell.identifier, forIndexPath: indexPath) as! MealTableViewCell
-        // swiftlint:enable force_cast
 
         // Fetches the appropriate meal for the data source layout.
         let meal = meals[indexPath.row]
@@ -118,14 +116,22 @@ class MealTableViewController: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        if segue.identifier == R.segue.mealTableViewController.showDetail.identifier {
+            let mealDetailViewController = segue.destinationViewController as! MealViewController
 
+            if let selectedMealCell = sender as? MealTableViewCell {
+                let indexPath = tableView.indexPathForCell(selectedMealCell)!
+                let selectedMeal = meals[indexPath.row]
+                mealDetailViewController.meal = selectedMeal
+            }
+
+        } else if segue.identifier == R.segue.mealTableViewController.addItem.identifier {
+            print("Adding new meal.")
+        }
+    }
 }
