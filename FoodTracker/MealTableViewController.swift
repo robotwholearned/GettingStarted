@@ -28,7 +28,11 @@ class MealTableViewController: UITableViewController {
 
         navigationItem.leftBarButtonItem = editButtonItem()
 
-        loadSampleMeals()
+        if let loadedMeals = loadMeals() {
+            meals += loadedMeals
+        } else {
+            loadSampleMeals()
+        }
     }
 
     func loadSampleMeals() {
