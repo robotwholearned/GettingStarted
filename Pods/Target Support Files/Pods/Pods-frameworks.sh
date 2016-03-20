@@ -84,8 +84,8 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-FoodTracker/Rswift.framework"
+  install_framework "Pods/Rswift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-FoodTracker/Rswift.framework"
+  install_framework "Pods/Rswift.framework"
 fi

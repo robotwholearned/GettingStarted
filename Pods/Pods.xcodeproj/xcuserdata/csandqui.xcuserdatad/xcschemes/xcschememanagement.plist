@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-FoodTracker.xcscheme</key>
+		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>48AA7A6DF90390AF5733E6DA8013BEDF</key>
+		<key>1445427D683CC9BB5A8E1DD4406071D9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A7B4D76613C4DAE4BD3A6FE25CB24F4B</key>
+		<key>8B421A982178ABE11F8F039B33E91C1E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
