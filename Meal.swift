@@ -14,6 +14,8 @@ class Meal: NSObject, NSCoding {
     var name: String
     var photo: UIImage?
     var rating: Int
+    var instructions: [String]?
+    var ingredients: [String]?
 
     // MARK: Archiving Paths
     static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
@@ -24,15 +26,19 @@ class Meal: NSObject, NSCoding {
         static let nameKey = "name"
         static let photoKey = "photo"
         static let ratingKey = "rating"
+        static let instructionsKey = "instructions"
+        static let ingredientsKey = "ingredients"
     }
 
     // MARK: Initialization
-    init?(name: String, photo: UIImage?, rating: Int) {
+    init?(name: String, photo: UIImage?, rating: Int, ingredients: [String]?, instructions: [String]?) {
 
         // Initialize stored properties.
         self.name = name
         self.photo = photo
         self.rating = rating
+        self.ingredients = ingredients
+        self.instructions = instructions
 
         super.init()
 
@@ -47,13 +53,17 @@ class Meal: NSObject, NSCoding {
         aCoder.encodeObject(name, forKey: PropertyKey.nameKey)
         aCoder.encodeObject(photo, forKey: PropertyKey.photoKey)
         aCoder.encodeInteger(rating, forKey: PropertyKey.ratingKey)
+        aCoder.encodeObject(ingredients, forKey: PropertyKey.ingredientsKey)
+        aCoder.encodeObject(instructions, forKey: PropertyKey.instructionsKey)
     }
     required convenience init?(coder aDecoder: NSCoder) {
         let name = aDecoder.decodeObjectForKey(PropertyKey.nameKey) as! String
         let photo = aDecoder.decodeObjectForKey(PropertyKey.photoKey) as? UIImage
         let rating = aDecoder.decodeIntegerForKey(PropertyKey.ratingKey)
+        let ingredients = aDecoder.decodeObjectForKey(PropertyKey.ingredientsKey) as? [String]
+        let instructions = aDecoder.decodeObjectForKey(PropertyKey.instructionsKey) as? [String]
 
-        self.init(name: name, photo: photo, rating: rating)
+        self.init(name: name, photo: photo, rating: rating, ingredients: ingredients, instructions: instructions)
 
     }
 }
