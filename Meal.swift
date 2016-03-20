@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Meal {
+class Meal: NSObject {
 
     // MARK: Properties
     var name: String
@@ -24,10 +24,13 @@ class Meal {
 
     // MARK: Initialization
     init?(name: String, photo: UIImage?, rating: Int) {
+
         // Initialize stored properties.
         self.name = name
         self.photo = photo
         self.rating = rating
+
+        super.init()
 
         // Initialization should fail if there is no name or if the rating is negative.
         if name.isEmpty || rating < 0 {
