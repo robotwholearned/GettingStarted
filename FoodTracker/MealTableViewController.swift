@@ -26,6 +26,8 @@ class MealTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.leftBarButtonItem = editButtonItem()
+
         loadSampleMeals()
     }
 
