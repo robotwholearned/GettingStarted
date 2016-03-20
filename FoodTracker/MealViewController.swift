@@ -28,6 +28,13 @@ class MealViewController: UIViewController {
         // Handle the text field’s user input through delegate callbacks.
         nameTextField.delegate = self
         checkValidMealName()
+
+        if let existingMeal = meal {
+            navigationItem.title = existingMeal.name
+            nameTextField.text = existingMeal.name
+            photoImageView.image = existingMeal.photo
+            ratingControl.rating = existingMeal.rating
+        }
     }
 
     // MARK: Navigation
