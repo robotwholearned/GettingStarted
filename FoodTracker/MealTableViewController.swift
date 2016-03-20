@@ -37,13 +37,13 @@ class MealTableViewController: UITableViewController {
 
     func loadSampleMeals() {
         let photo1 = R.image.meal1()
-        let meal1 = Meal(name: MealNames.capreseSalad, photo: photo1, rating: RatingLevels.Four.rawValue)!
+        let meal1 = Meal(name: MealNames.capreseSalad, photo: photo1, rating: RatingLevels.Four.rawValue, ingredients: nil, instructions: nil)!
 
         let photo2 = R.image.meal2()
-        let meal2 = Meal(name: MealNames.chickenAndPotatoes, photo: photo2, rating: RatingLevels.Five.rawValue)!
+        let meal2 = Meal(name: MealNames.chickenAndPotatoes, photo: photo2, rating: RatingLevels.Five.rawValue, ingredients: nil, instructions: nil)!
 
         let photo3 = R.image.meal3()
-        let meal3 = Meal(name: MealNames.pastaAndMeatballs, photo: photo3, rating: RatingLevels.Three.rawValue)!
+        let meal3 = Meal(name: MealNames.pastaAndMeatballs, photo: photo3, rating: RatingLevels.Three.rawValue, ingredients: nil, instructions: nil)!
 
         meals += [meal1, meal2, meal3]
     }

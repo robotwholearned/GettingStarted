@@ -54,7 +54,7 @@ class MealViewController: UIViewController {
             let photo = photoImageView.image
             let rating = ratingControl.rating
 
-            meal = Meal(name: name, photo: photo, rating: rating)
+            meal = Meal(name: name, photo: photo, rating: rating, ingredients: nil, instructions: nil)
 
         }
     }
