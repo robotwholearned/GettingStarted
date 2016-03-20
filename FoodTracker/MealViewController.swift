@@ -39,7 +39,13 @@ class MealViewController: UIViewController {
 
     // MARK: Navigation
     @IBAction func cancel(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
+        let isPresentingInAddMealMode = presentingViewController is UINavigationController
+        if isPresentingInAddMealMode {
+            dismissViewControllerAnimated(true, completion: nil)
+        } else {
+            navigationController?.popViewControllerAnimated(true)
+        }
+
     }
     // This method lets you configure a view controller before it's presented.
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
