@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2A946C3A372B849B52D0EEE6 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C08FF9FD19574BDF7D2677B /* Pods.framework */; };
 		76EEFAC5C8824C55E09ED786 /* Pods_FoodTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B252D2E9D50F5A624E9EAA /* Pods_FoodTracker.framework */; };
+		934EC2441C9F12FE008F5921 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934EC2431C9F12FE008F5921 /* Ingredient.swift */; };
 		939CD59D1C946ED10047EE8B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CD59C1C946ED10047EE8B /* R.generated.swift */; };
 		939CD59F1C9475270047EE8B /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CD59E1C9475270047EE8B /* Meal.swift */; };
 		939CD5A01C9475560047EE8B /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CD59E1C9475270047EE8B /* Meal.swift */; };
@@ -38,6 +39,7 @@
 		284D0E010E17DB79726DC237 /* Pods-FoodTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodTracker/Pods-FoodTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		3C08FF9FD19574BDF7D2677B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41831956E2C189B13817F506 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		934EC2431C9F12FE008F5921 /* Ingredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		939CD59B1C946BDD0047EE8B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		939CD59C1C946ED10047EE8B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		939CD59E1C9475270047EE8B /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Meal.swift; path = ../Meal.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				939CD59E1C9475270047EE8B /* Meal.swift */,
+				934EC2431C9F12FE008F5921 /* Ingredient.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				TargetAttributes = {
 					93AD11B61C9441FF009B4EFE = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = M9JWF6L2BA;
 					};
 					93AD11CA1C944200009B4EFE = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -364,6 +368,7 @@
 				93AD11BD1C9441FF009B4EFE /* MealViewController.swift in Sources */,
 				939CD5A81C94E1940047EE8B /* MealTableViewController.swift in Sources */,
 				939CD5A61C947BD30047EE8B /* MealTableViewCell.swift in Sources */,
+				934EC2441C9F12FE008F5921 /* Ingredient.swift in Sources */,
 				93AD11DB1C945B34009B4EFE /* RatingControl.swift in Sources */,
 				93AD11BB1C9441FF009B4EFE /* AppDelegate.swift in Sources */,
 				939CD59D1C946ED10047EE8B /* R.generated.swift in Sources */,
